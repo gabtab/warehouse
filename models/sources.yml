@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: website_db
+    database: postgres
+    schema: public
+    tables:
+      - name: cart_cart
+      - name: cart_cartitem
+      - name: django_session
+      - name: checkout_order
+      - name: checkout_orderitem
+      - name: checkout_customer
+      - name: catalogue_product
+      - name: cart_discount
+      - name: invoice_invoice
+
+  - name: landing_python
+    database: postgres
+    schema: landing_python
+    tables:
+      - name: stripe_sessions
+      - name: stripe_transactions
+      - name: sumup_transactions

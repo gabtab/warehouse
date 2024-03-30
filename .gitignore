@@ -1,0 +1,7 @@
+.env
+venv/*
+DbVisualizer
+.dbt
+target
+logs
+**__pycache__**
