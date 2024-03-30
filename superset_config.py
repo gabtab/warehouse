@@ -1,0 +1,1 @@
+SECRET_KEY="{{ env_var('SUPERSET_SECRET') }}"

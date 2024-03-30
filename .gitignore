@@ -5,3 +5,4 @@ DbVisualizer
 target
 logs
 **__pycache__**
+dbt_packages

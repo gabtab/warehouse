@@ -13,7 +13,8 @@ final as (
         updated_at as checkout_order_updated_at,
         user_id as checkout_order_user_id,
         guest_id as checkout_order_guest_id,
-        customer_id as checkout_order_customer_id
+        customer_id as checkout_order_customer_id,
+        stripe_session_id as stripe_session_id
 
     from checkout_order
 
