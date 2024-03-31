@@ -6,7 +6,6 @@ final as (
     
     select
     
-    index,
     amount::decimal(20,2) as amount, 
     card_type, 
     currency, 

@@ -2,7 +2,7 @@
 import os
 import pandas as pd
 import requests
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 
 # Get password from environment variable
 password = os.getenv('POSTGRES_PASS')
@@ -32,7 +32,9 @@ def convert_to_dataframe(data):
 
 # Define function to load data into PostgreSQL
 def load_data_into_postgres(df, table_name, schema_name):
-    df.to_sql(table_name, engine, if_exists='replace', schema=schema_name)
+    with engine.begin() as connection:
+        connection.execute(text(f"DROP TABLE IF EXISTS {schema_name}.{table_name} CASCADE"))
+    df.to_sql(table_name, engine, if_exists='replace', schema=schema_name, index=False)
 
 # Fetch data from SumUp
 sumup_transactions = fetch_transactions_from_sumup()

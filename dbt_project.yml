@@ -14,3 +14,4 @@ clean-targets:         # directories to be removed by `dbt clean`
 vars:
   sample_size: 50
   sumup_charge: 0.0169
+  stripe_charge: 0.015

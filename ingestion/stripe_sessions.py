@@ -2,12 +2,13 @@
 import os
 import stripe
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 
 # Get password from environment variable
 password = os.getenv('POSTGRES_PASS')
 port = os.getenv('POSTGRES_PORT')
 stripe.api_key = os.getenv('injestion_key')
+
 # Set up database connection
 engine = create_engine(f'postgresql://postgres:{password}@localhost:{port}/postgres')
 
@@ -30,9 +31,12 @@ def convert_to_dataframe(data):
                 item[key] = str(value)
     df = pd.DataFrame(data)
     return df
+
 # Define function to load data into PostgreSQL
 def load_data_into_postgres(df, table_name, schema_name):
-    df.to_sql(table_name, engine, if_exists='replace', schema=schema_name)
+    with engine.begin() as connection:
+        connection.execute(text(f"DROP TABLE IF EXISTS {schema_name}.{table_name} CASCADE"))
+    df.to_sql(table_name, engine, if_exists='replace', schema=schema_name, index=False)
 
 # Fetch data from Stripe
 stripe_sessions = fetch_sessions_from_stripe()
