@@ -1,0 +1,160 @@
+15:43:32  Encountered an error:
+[Errno 13] Permission denied: 'C:\\WINDOWS\\system32\\logs\\dbt.log'
+15:43:32  Traceback (most recent call last):
+  File "E:\warehouse\venv\lib\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "E:\warehouse\venv\lib\site-packages\dbt\cli\requires.py", line 52, in wrapper
+    setup_event_logger(flags=flags, callbacks=callbacks)
+  File "E:\warehouse\venv\lib\site-packages\dbt\events\functions.py", line 70, in setup_event_logger
+    EVENT_MANAGER.add_logger(
+  File "E:\warehouse\venv\lib\site-packages\dbt\events\eventmgr.py", line 37, in add_logger
+    _JsonLogger(config) if config.line_format == LineFormat.Json else _TextLogger(config)
+  File "E:\warehouse\venv\lib\site-packages\dbt\events\logger.py", line 133, in __init__
+    super().__init__(config)
+  File "E:\warehouse\venv\lib\site-packages\dbt\events\logger.py", line 100, in __init__
+    file_handler = RotatingFileHandler(
+  File "C:\Users\New User\AppData\Local\Programs\Python\Python310\lib\logging\handlers.py", line 155, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+  File "C:\Users\New User\AppData\Local\Programs\Python\Python310\lib\logging\handlers.py", line 58, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+  File "C:\Users\New User\AppData\Local\Programs\Python\Python310\lib\logging\__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "C:\Users\New User\AppData\Local\Programs\Python\Python310\lib\logging\__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+PermissionError: [Errno 13] Permission denied: 'C:\\WINDOWS\\system32\\logs\\dbt.log'
+
+^C15:50:59  Encountered an error:
+[Errno 13] Permission denied: 'C:\\WINDOWS\\system32\\logs\\dbt.log'
+15:50:59  Traceback (most recent call last):
+  File "E:\warehouse\venv\lib\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "E:\warehouse\venv\lib\site-packages\dbt\cli\requires.py", line 52, in wrapper
+    setup_event_logger(flags=flags, callbacks=callbacks)
+  File "E:\warehouse\venv\lib\site-packages\dbt\events\functions.py", line 70, in setup_event_logger
+    EVENT_MANAGER.add_logger(
+  File "E:\warehouse\venv\lib\site-packages\dbt\events\eventmgr.py", line 37, in add_logger
+    _JsonLogger(config) if config.line_format == LineFormat.Json else _TextLogger(config)
+  File "E:\warehouse\venv\lib\site-packages\dbt\events\logger.py", line 133, in __init__
+    super().__init__(config)
+  File "E:\warehouse\venv\lib\site-packages\dbt\events\logger.py", line 100, in __init__
+    file_handler = RotatingFileHandler(
+  File "C:\Users\New User\AppData\Local\Programs\Python\Python310\lib\logging\handlers.py", line 155, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding=encoding,
+  File "C:\Users\New User\AppData\Local\Programs\Python\Python310\lib\logging\handlers.py", line 58, in __init__
+    logging.FileHandler.__init__(self, filename, mode=mode,
+  File "C:\Users\New User\AppData\Local\Programs\Python\Python310\lib\logging\__init__.py", line 1169, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "C:\Users\New User\AppData\Local\Programs\Python\Python310\lib\logging\__init__.py", line 1201, in _open
+    return open_func(self.baseFilename, self.mode,
+PermissionError: [Errno 13] Permission denied: 'C:\\WINDOWS\\system32\\logs\\dbt.log'
+
+15:52:39  Running with dbt=1.7.11
+15:52:39  Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\WINDOWS\system32\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+15:55:20  Running with dbt=1.7.11
+15:55:21  Registered adapter: postgres=1.7.11
+15:55:21  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+15:55:21  
+15:55:22  Concurrency: 2 threads (target='dev')
+15:55:22  
+15:55:22  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+15:55:22  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+15:55:22  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.31s]
+15:55:22  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+15:55:22  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.42s]
+15:55:22  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+15:55:22  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.31s]
+15:55:22  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+15:55:22  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.27s]
+15:55:22  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+15:55:22  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.30s]
+15:55:22  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+15:55:23  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.29s]
+15:55:23  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+15:55:23  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.29s]
+15:55:23  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+15:55:23  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.29s]
+15:55:23  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+15:55:23  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.29s]
+15:55:23  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+15:55:23  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.29s]
+15:55:23  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+15:55:23  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.29s]
+15:55:23  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+15:55:23  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.32s]
+15:55:23  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+15:55:24  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.41s]
+15:55:24  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+15:55:24  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.33s]
+15:55:24  16 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+15:55:24  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.31s]
+15:55:24  17 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+15:55:24  16 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.36s]
+15:55:24  18 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+15:55:24  17 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.33s]
+15:55:24  19 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+15:55:24  18 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.31s]
+15:55:24  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+15:55:25  19 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.31s]
+15:55:25  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.28s]
+15:55:25  
+15:55:25  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 3.88 seconds (3.88s).
+15:55:25  
+15:55:25  Completed successfully
+15:55:25  
+15:55:25  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+16:00:52  Running with dbt=1.7.11
+16:00:52  Registered adapter: postgres=1.7.11
+16:00:52  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+16:00:52  
+16:00:53  Concurrency: 2 threads (target='dev')
+16:00:53  
+16:00:53  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+16:00:53  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+16:00:53  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.36s]
+16:00:53  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+16:00:53  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.41s]
+16:00:53  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+16:00:54  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.31s]
+16:00:54  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+16:00:54  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.27s]
+16:00:54  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+16:00:54  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.28s]
+16:00:54  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+16:00:54  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.30s]
+16:00:54  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+16:00:54  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.29s]
+16:00:54  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+16:00:54  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.31s]
+16:00:54  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+16:00:55  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.31s]
+16:00:55  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+16:00:55  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.30s]
+16:00:55  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+16:00:55  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.29s]
+16:00:55  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+16:00:55  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.32s]
+16:00:55  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+16:00:55  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.33s]
+16:00:55  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+16:00:55  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.29s]
+16:00:55  16 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+16:00:56  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.29s]
+16:00:56  17 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+16:00:56  16 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.33s]
+16:00:56  18 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+16:00:56  17 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.35s]
+16:00:56  19 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+16:00:56  18 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.33s]
+16:00:56  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+16:00:56  19 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.30s]
+16:00:56  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.28s]
+16:00:56  
+16:00:56  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 3.95 seconds (3.95s).
+16:00:56  
+16:00:56  Completed successfully
+16:00:56  
+16:00:56  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20

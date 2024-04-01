@@ -6,7 +6,6 @@ with stripe_sessions as (
 final as (
 
     select 
-    stripe_index_id, 
     stripe_session_id, 
     allow_promotion_codes, 
     amount_subtotal::decimal(38,2), 

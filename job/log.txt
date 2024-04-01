@@ -1,0 +1,9 @@
+01/04/2024 17:00:31.06 
+Activated virtual environment successfully  
+Attempted to create first port (4000) tunnel  
+Attempted to create 2nd port (4001) tunnel  
+Ran stripe_sessions.py successfully  
+Ran stripe_transactions.py successfully  
+Ran sumup.py successfully  
+Ran dbt run successfully  
+Email attempted to send  

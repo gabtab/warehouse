@@ -6,7 +6,6 @@ final as (
     
     select
     
-    index as stripe_index, 
     id  as stripe_transaction_id, 
     object as stripe_object_type,
     case when amount ~ '^\d+$' then amount::integer / 100.0 else null end as amount_subtotal, 

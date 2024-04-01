@@ -5,7 +5,6 @@ with stripe_sessions as (
 final as (
     
     select 
-    index::integer as stripe_index_id, 
     id as stripe_session_id, 
     object, 
     after_expiration, 
