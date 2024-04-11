@@ -158,3 +158,581 @@ Runtime Error
 16:00:56  Completed successfully
 16:00:56  
 16:00:56  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+18:57:02  Running with dbt=1.7.11
+18:57:02  Registered adapter: postgres=1.7.11
+18:57:04  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:57:04  
+18:57:04  Concurrency: 2 threads (target='dev')
+18:57:04  
+18:57:04  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:57:04  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:57:05  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.38s]
+18:57:05  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:57:05  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.42s]
+18:57:05  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:57:05  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.31s]
+18:57:05  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:57:05  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.30s]
+18:57:05  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:57:05  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.28s]
+18:57:05  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:57:05  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.31s]
+18:57:05  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:57:06  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.41s]
+18:57:06  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:57:06  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.38s]
+18:57:06  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:57:06  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.37s]
+18:57:06  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:57:06  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.34s]
+18:57:06  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:57:06  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.34s]
+18:57:06  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:57:06  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.32s]
+18:57:06  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:57:07  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.33s]
+18:57:07  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:57:07  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.31s]
+18:57:07  16 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+18:57:07  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.38s]
+18:57:07  17 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:57:07  16 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.38s]
+18:57:07  18 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+18:57:07  17 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.34s]
+18:57:07  19 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+18:57:07  18 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.38s]
+18:57:07  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+18:57:08  19 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.39s]
+18:57:08  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.36s]
+18:57:08  
+18:57:08  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 4.41 seconds (4.41s).
+18:57:08  
+18:57:08  Completed successfully
+18:57:08  
+18:57:08  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+18:58:27  Running with dbt=1.7.11
+18:58:28  Registered adapter: postgres=1.7.11
+18:58:28  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:58:28  
+18:58:28  Concurrency: 2 threads (target='dev')
+18:58:28  
+18:58:29  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:58:29  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:58:29  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.39s]
+18:58:29  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:58:29  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.44s]
+18:58:29  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:58:29  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.27s]
+18:58:29  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:58:29  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.34s]
+18:58:29  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:58:30  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.30s]
+18:58:30  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:58:30  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.31s]
+18:58:30  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:58:30  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.32s]
+18:58:30  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:58:30  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.33s]
+18:58:30  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:58:30  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.28s]
+18:58:30  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:58:30  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.30s]
+18:58:30  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:58:30  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.30s]
+18:58:30  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:58:31  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.31s]
+18:58:31  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:58:31  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.37s]
+18:58:31  15 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+18:58:31  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.36s]
+18:58:31  16 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:58:31  15 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.36s]
+18:58:31  17 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+18:58:31  16 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.38s]
+18:58:31  18 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+18:58:31  17 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.28s]
+18:58:32  19 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:58:32  18 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.31s]
+18:58:32  19 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.22s]
+18:58:32  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+18:58:32  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.26s]
+18:58:32  
+18:58:32  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 4.15 seconds (4.15s).
+18:58:32  
+18:58:32  Completed successfully
+18:58:32  
+18:58:32  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+19:00:07  Running with dbt=1.7.11
+19:00:08  Registered adapter: postgres=1.7.11
+19:00:08  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+19:00:08  
+19:00:08  Concurrency: 2 threads (target='dev')
+19:00:08  
+19:00:08  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+19:00:08  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+19:00:09  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.36s]
+19:00:09  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+19:00:09  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.41s]
+19:00:09  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+19:00:09  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.29s]
+19:00:09  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+19:00:09  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.27s]
+19:00:09  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+19:00:09  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.32s]
+19:00:09  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+19:00:09  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.34s]
+19:00:09  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+19:00:10  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.32s]
+19:00:10  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+19:00:10  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.31s]
+19:00:10  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+19:00:10  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.32s]
+19:00:10  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+19:00:10  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.31s]
+19:00:10  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+19:00:10  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.34s]
+19:00:10  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+19:00:10  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.35s]
+19:00:10  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+19:00:11  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.40s]
+19:00:11  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+19:00:11  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.38s]
+19:00:11  16 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+19:00:11  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.32s]
+19:00:11  17 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+19:00:11  16 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.38s]
+19:00:11  18 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+19:00:12  17 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.43s]
+19:00:12  19 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+19:00:12  18 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.38s]
+19:00:12  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+19:00:12  19 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.31s]
+19:00:12  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.32s]
+19:00:12  
+19:00:12  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 4.24 seconds (4.24s).
+19:00:12  
+19:00:12  Completed successfully
+19:00:12  
+19:00:12  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+18:01:00  Running with dbt=1.7.11
+18:01:00  Registered adapter: postgres=1.7.11
+18:01:01  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:01:01  
+18:01:02  Concurrency: 2 threads (target='dev')
+18:01:02  
+18:01:02  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:01:02  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:01:02  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.34s]
+18:01:02  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:01:02  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.42s]
+18:01:02  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:01:03  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.34s]
+18:01:03  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:01:03  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.31s]
+18:01:03  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:01:03  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.30s]
+18:01:03  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:01:03  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.33s]
+18:01:03  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:01:03  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.33s]
+18:01:03  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:01:03  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.34s]
+18:01:03  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:01:04  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.33s]
+18:01:04  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:01:04  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.31s]
+18:01:04  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:01:04  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.31s]
+18:01:04  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:01:04  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.31s]
+18:01:04  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:01:04  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.41s]
+18:01:04  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:01:04  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.33s]
+18:01:04  16 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+18:01:05  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.33s]
+18:01:05  17 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:01:05  16 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.34s]
+18:01:05  18 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+18:01:05  17 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.33s]
+18:01:05  19 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+18:01:05  18 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.34s]
+18:01:05  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+18:01:05  19 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.31s]
+18:01:05  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.31s]
+18:01:06  
+18:01:06  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 4.11 seconds (4.11s).
+18:01:06  
+18:01:06  Completed successfully
+18:01:06  
+18:01:06  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+20:13:11  Running with dbt=1.7.11
+20:13:11  Registered adapter: postgres=1.7.11
+20:13:13  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+20:13:13  
+20:13:13  Concurrency: 2 threads (target='dev')
+20:13:13  
+20:13:13  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+20:13:13  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+20:13:13  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.36s]
+20:13:13  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+20:13:13  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.37s]
+20:13:13  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+20:13:14  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.29s]
+20:13:14  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+20:13:14  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.38s]
+20:13:14  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+20:13:14  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.31s]
+20:13:14  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+20:13:14  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.35s]
+20:13:14  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+20:13:14  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.40s]
+20:13:14  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+20:13:15  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.42s]
+20:13:15  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+20:13:15  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.36s]
+20:13:15  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+20:13:15  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.33s]
+20:13:15  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+20:13:15  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.29s]
+20:13:15  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+20:13:15  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.31s]
+20:13:15  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+20:13:15  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.36s]
+20:13:15  15 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+20:13:15  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.32s]
+20:13:15  16 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+20:13:16  15 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.31s]
+20:13:16  17 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+20:13:16  16 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.32s]
+20:13:16  18 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+20:13:16  17 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.35s]
+20:13:16  19 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+20:13:16  18 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.37s]
+20:13:16  19 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.26s]
+20:13:16  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+20:13:17  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.21s]
+20:13:17  
+20:13:17  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 4.20 seconds (4.20s).
+20:13:17  
+20:13:17  Completed successfully
+20:13:17  
+20:13:17  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+18:01:02  Running with dbt=1.7.11
+18:01:02  Registered adapter: postgres=1.7.11
+18:01:03  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:01:03  
+18:01:04  Concurrency: 2 threads (target='dev')
+18:01:04  
+18:01:04  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:01:04  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:01:04  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.40s]
+18:01:04  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:01:04  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.45s]
+18:01:04  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:01:05  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.28s]
+18:01:05  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:01:05  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.28s]
+18:01:05  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:01:05  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.39s]
+18:01:05  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:01:05  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.41s]
+18:01:05  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:01:05  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.27s]
+18:01:05  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:01:06  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.32s]
+18:01:06  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:01:06  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.32s]
+18:01:06  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:01:06  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.33s]
+18:01:06  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:01:06  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.35s]
+18:01:06  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:01:06  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.36s]
+18:01:06  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:01:06  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.34s]
+18:01:06  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:01:07  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.31s]
+18:01:07  16 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+18:01:07  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.29s]
+18:01:07  17 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:01:07  16 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.32s]
+18:01:07  18 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+18:01:07  17 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.35s]
+18:01:07  19 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+18:01:07  18 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.35s]
+18:01:07  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+18:01:07  19 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.36s]
+18:01:08  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.34s]
+18:01:08  
+18:01:08  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 4.26 seconds (4.26s).
+18:01:08  
+18:01:08  Completed successfully
+18:01:08  
+18:01:08  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+18:01:04  Running with dbt=1.7.11
+18:01:04  Registered adapter: postgres=1.7.11
+18:01:06  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:01:06  
+18:01:06  Concurrency: 2 threads (target='dev')
+18:01:06  
+18:01:06  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:01:06  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:01:06  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.35s]
+18:01:06  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:01:07  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.40s]
+18:01:07  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:01:07  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.30s]
+18:01:07  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:01:07  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.31s]
+18:01:07  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:01:07  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.54s]
+18:01:07  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:01:07  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.47s]
+18:01:07  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:01:08  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.32s]
+18:01:08  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:01:08  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.32s]
+18:01:08  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:01:08  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.28s]
+18:01:08  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:01:08  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.29s]
+18:01:08  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:01:08  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.32s]
+18:01:08  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:01:08  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.38s]
+18:01:08  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:01:09  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 269 in 0.42s]
+18:01:09  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:01:09  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.34s]
+18:01:09  16 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+18:01:09  16 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.39s]
+18:01:09  17 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+18:01:09  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.50s]
+18:01:09  18 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+18:01:10  17 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.49s]
+18:01:10  19 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:01:10  18 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 318 in 0.43s]
+18:01:10  19 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.24s]
+18:01:10  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+18:01:10  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.26s]
+18:01:10  
+18:01:10  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 4.71 seconds (4.71s).
+18:01:10  
+18:01:10  Completed successfully
+18:01:10  
+18:01:10  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+18:20:28  Running with dbt=1.7.11
+18:20:29  Registered adapter: postgres=1.7.11
+18:20:30  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:20:30  
+18:20:31  Concurrency: 2 threads (target='dev')
+18:20:31  
+18:20:31  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:20:31  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:20:31  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.37s]
+18:20:31  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:20:31  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.43s]
+18:20:31  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:20:31  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.33s]
+18:20:31  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:20:31  4 of 20 OK created sql view model warehouse.stg_landing_sumup_transactions ..... [CREATE VIEW in 0.27s]
+18:20:31  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:20:32  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.32s]
+18:20:32  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:20:32  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.31s]
+18:20:32  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:20:32  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.29s]
+18:20:32  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:20:32  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.30s]
+18:20:32  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:20:32  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.28s]
+18:20:32  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:20:32  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.30s]
+18:20:32  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:20:33  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.28s]
+18:20:33  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:20:33  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.39s]
+18:20:33  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:20:33  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 270 in 0.37s]
+18:20:33  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:20:33  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.28s]
+18:20:33  16 of 20 START sql table model warehouse.int_sumup_transactions ................ [RUN]
+18:20:33  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.27s]
+18:20:33  17 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:20:33  16 of 20 OK created sql table model warehouse.int_sumup_transactions ........... [SELECT 49 in 0.42s]
+18:20:33  18 of 20 START sql table model warehouse.dim_sumup ............................. [RUN]
+18:20:34  17 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.35s]
+18:20:34  19 of 20 START sql table model warehouse.xa_sales_report ....................... [RUN]
+18:20:34  18 of 20 OK created sql table model warehouse.dim_sumup ........................ [SELECT 49 in 0.29s]
+18:20:34  20 of 20 START sql table model warehouse.fact_transactions ..................... [RUN]
+18:20:34  19 of 20 OK created sql table model warehouse.xa_sales_report .................. [SELECT 319 in 0.29s]
+18:20:34  20 of 20 OK created sql table model warehouse.fact_transactions ................ [SELECT 156 in 0.25s]
+18:20:34  
+18:20:34  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 4.03 seconds (4.03s).
+18:20:34  
+18:20:34  Completed successfully
+18:20:34  
+18:20:34  Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+18:01:02  Running with dbt=1.7.11
+18:01:03  Registered adapter: postgres=1.7.11
+18:01:04  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:01:04  
+18:01:05  Concurrency: 2 threads (target='dev')
+18:01:05  
+18:01:05  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:01:05  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:01:05  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.32s]
+18:01:05  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:01:05  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.40s]
+18:01:05  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:01:05  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.29s]
+18:01:05  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:01:06  4 of 20 ERROR creating sql view model warehouse.stg_landing_sumup_transactions . [ERROR in 0.39s]
+18:01:06  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:01:06  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.30s]
+18:01:06  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:01:06  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.29s]
+18:01:06  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:01:06  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.33s]
+18:01:06  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:01:06  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.33s]
+18:01:06  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:01:06  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.29s]
+18:01:06  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:01:07  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.31s]
+18:01:07  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:01:07  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.30s]
+18:01:07  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:01:07  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.28s]
+18:01:07  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:01:07  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 270 in 0.33s]
+18:01:07  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:01:07  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.31s]
+18:01:07  16 of 20 SKIP relation warehouse.int_sumup_transactions ........................ [SKIP]
+18:01:07  17 of 20 SKIP relation warehouse.dim_sumup ..................................... [SKIP]
+18:01:07  18 of 20 SKIP relation warehouse.xa_sales_report ............................... [SKIP]
+18:01:07  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.30s]
+18:01:07  19 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:01:08  19 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.23s]
+18:01:08  20 of 20 SKIP relation warehouse.fact_transactions ............................. [SKIP]
+18:01:08  
+18:01:08  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 3.45 seconds (3.45s).
+18:01:08  
+18:01:08  Completed with 1 error and 0 warnings:
+18:01:08  
+18:01:08    Database Error in model stg_landing_sumup_transactions (models\staging\stg_landing_sumup_transactions.sql)
+  column "internal_client_transaction_id" does not exist
+  LINE 21:     internal_client_transaction_id, 
+               ^
+  compiled Code at target\run\my_project\models\staging\stg_landing_sumup_transactions.sql
+18:01:08  
+18:01:08  Done. PASS=15 WARN=0 ERROR=1 SKIP=4 TOTAL=20
+18:01:06  Running with dbt=1.7.11
+18:01:06  Registered adapter: postgres=1.7.11
+18:01:08  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:01:08  
+18:01:09  Concurrency: 2 threads (target='dev')
+18:01:09  
+18:01:09  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:01:09  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:01:09  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.46s]
+18:01:09  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:01:09  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.58s]
+18:01:09  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:01:10  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.36s]
+18:01:10  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:01:10  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.20s]
+18:01:10  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:01:10  4 of 20 ERROR creating sql view model warehouse.stg_landing_sumup_transactions . [ERROR in 0.46s]
+18:01:10  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:01:10  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.28s]
+18:01:10  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:01:10  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.29s]
+18:01:10  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:01:10  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.28s]
+18:01:10  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:01:10  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.30s]
+18:01:10  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:01:11  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.31s]
+18:01:11  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:01:11  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.31s]
+18:01:11  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:01:11  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.30s]
+18:01:11  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:01:11  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 270 in 0.33s]
+18:01:11  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:01:11  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 71 in 0.29s]
+18:01:11  16 of 20 SKIP relation warehouse.int_sumup_transactions ........................ [SKIP]
+18:01:11  17 of 20 SKIP relation warehouse.dim_sumup ..................................... [SKIP]
+18:01:11  18 of 20 SKIP relation warehouse.xa_sales_report ............................... [SKIP]
+18:01:11  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 107 in 0.29s]
+18:01:11  19 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:01:12  19 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 107 in 0.29s]
+18:01:12  20 of 20 SKIP relation warehouse.fact_transactions ............................. [SKIP]
+18:01:12  
+18:01:12  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 3.74 seconds (3.74s).
+18:01:12  
+18:01:12  Completed with 1 error and 0 warnings:
+18:01:12  
+18:01:12    Database Error in model stg_landing_sumup_transactions (models\staging\stg_landing_sumup_transactions.sql)
+  column "internal_client_transaction_id" does not exist
+  LINE 21:     internal_client_transaction_id, 
+               ^
+  compiled Code at target\run\my_project\models\staging\stg_landing_sumup_transactions.sql
+18:01:12  
+18:01:12  Done. PASS=15 WARN=0 ERROR=1 SKIP=4 TOTAL=20
+18:00:57  Running with dbt=1.7.11
+18:00:58  Registered adapter: postgres=1.7.11
+18:00:59  Found 20 models, 12 sources, 0 exposures, 0 metrics, 515 macros, 0 groups, 0 semantic models
+18:00:59  
+18:01:00  Concurrency: 2 threads (target='dev')
+18:01:00  
+18:01:00  1 of 20 START sql view model warehouse.int_cart_item ........................... [RUN]
+18:01:00  2 of 20 START sql view model warehouse.stg_landing_stripe_sessions ............. [RUN]
+18:01:00  2 of 20 OK created sql view model warehouse.stg_landing_stripe_sessions ........ [CREATE VIEW in 0.32s]
+18:01:00  3 of 20 START sql view model warehouse.stg_landing_stripe_transactions ......... [RUN]
+18:01:00  1 of 20 OK created sql view model warehouse.int_cart_item ...................... [CREATE VIEW in 0.43s]
+18:01:00  4 of 20 START sql view model warehouse.stg_landing_sumup_transactions .......... [RUN]
+18:01:00  3 of 20 OK created sql view model warehouse.stg_landing_stripe_transactions .... [CREATE VIEW in 0.38s]
+18:01:00  5 of 20 START sql view model warehouse.stg_web_cart ............................ [RUN]
+18:01:01  4 of 20 ERROR creating sql view model warehouse.stg_landing_sumup_transactions . [ERROR in 0.39s]
+18:01:01  6 of 20 START sql view model warehouse.stg_web_cart_item ....................... [RUN]
+18:01:01  5 of 20 OK created sql view model warehouse.stg_web_cart ....................... [CREATE VIEW in 0.24s]
+18:01:01  7 of 20 START sql view model warehouse.stg_web_catalogue_product ............... [RUN]
+18:01:01  6 of 20 OK created sql view model warehouse.stg_web_cart_item .................. [CREATE VIEW in 0.32s]
+18:01:01  8 of 20 START sql view model warehouse.stg_web_checkout_customer ............... [RUN]
+18:01:01  7 of 20 OK created sql view model warehouse.stg_web_catalogue_product .......... [CREATE VIEW in 0.34s]
+18:01:01  9 of 20 START sql view model warehouse.stg_web_checkout_order .................. [RUN]
+18:01:01  8 of 20 OK created sql view model warehouse.stg_web_checkout_customer .......... [CREATE VIEW in 0.39s]
+18:01:01  10 of 20 START sql view model warehouse.stg_web_checkout_order_item ............ [RUN]
+18:01:01  9 of 20 OK created sql view model warehouse.stg_web_checkout_order ............. [CREATE VIEW in 0.34s]
+18:01:01  11 of 20 START sql view model warehouse.stg_web_invoice ........................ [RUN]
+18:01:02  10 of 20 OK created sql view model warehouse.stg_web_checkout_order_item ....... [CREATE VIEW in 0.30s]
+18:01:02  12 of 20 START sql view model warehouse.stg_web_sessions ....................... [RUN]
+18:01:02  11 of 20 OK created sql view model warehouse.stg_web_invoice ................... [CREATE VIEW in 0.30s]
+18:01:02  13 of 20 START sql table model warehouse.int_stripe_actions_sessions ........... [RUN]
+18:01:02  12 of 20 OK created sql view model warehouse.stg_web_sessions .................. [CREATE VIEW in 0.37s]
+18:01:02  14 of 20 START sql table model warehouse.int_stripe_customer_sessions .......... [RUN]
+18:01:02  13 of 20 OK created sql table model warehouse.int_stripe_actions_sessions ...... [SELECT 271 in 0.39s]
+18:01:02  15 of 20 START sql table model warehouse.int_stripe_transactions ............... [RUN]
+18:01:02  14 of 20 OK created sql table model warehouse.int_stripe_customer_sessions ..... [SELECT 72 in 0.29s]
+18:01:02  16 of 20 SKIP relation warehouse.int_sumup_transactions ........................ [SKIP]
+18:01:02  17 of 20 SKIP relation warehouse.dim_sumup ..................................... [SKIP]
+18:01:02  18 of 20 SKIP relation warehouse.xa_sales_report ............................... [SKIP]
+18:01:02  15 of 20 OK created sql table model warehouse.int_stripe_transactions .......... [SELECT 108 in 0.30s]
+18:01:02  19 of 20 START sql table model warehouse.dim_stripe ............................ [RUN]
+18:01:03  19 of 20 OK created sql table model warehouse.dim_stripe ....................... [SELECT 108 in 0.33s]
+18:01:03  20 of 20 SKIP relation warehouse.fact_transactions ............................. [SKIP]
+18:01:03  
+18:01:03  Finished running 12 view models, 8 table models in 0 hours 0 minutes and 3.71 seconds (3.71s).
+18:01:03  
+18:01:03  Completed with 1 error and 0 warnings:
+18:01:03  
+18:01:03    Database Error in model stg_landing_sumup_transactions (models\staging\stg_landing_sumup_transactions.sql)
+  column "internal_client_transaction_id" does not exist
+  LINE 21:     internal_client_transaction_id, 
+               ^
+  compiled Code at target\run\my_project\models\staging\stg_landing_sumup_transactions.sql
+18:01:03  
+18:01:03  Done. PASS=15 WARN=0 ERROR=1 SKIP=4 TOTAL=20
